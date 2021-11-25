@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #c4c4c4;
+    height: 90px;
+    display: flex;
+    justify-content: right;
+}
+header div.logo {
+    height: 90px;
+    max-width: 125px;
+    margin-right: auto;
+}
+header div.logo img {
+    height: 100%;
+}
+header nav {
+    display: flex;
+    margin-right: 5vw;
+}
+header nav ul li {
+    list-style: none;
+    float: left;
+    padding: 32.5px 15px 30px;
+
+}
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    padding: 30px 20px 30px;
+}
+header nav ul li.whatsappBtn {
+    padding: 0px;
+    margin: 25px 15px 25px;
+}
+header nav ul li.whatsappBtn button {
+    padding: 5px 0px 5px;
+    border-radius: 24px;
+    box-shadow: 2px 2px #222;
+}
+header nav ul li.whatsappBtn .fa-whatsapp {
+    padding-right: 10px;
+}
+
+/* fim do header */
+
+footer {
+    background-color: #c4c4c4;
+}
+footer div.footerNav {
+    background-color: #a4a4a4;
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+footer div.logo img {
+    width: 150px;
+    height: auto;
+}
+footer div.footerCol {
+    margin-left: 15%;
+    line-height: 1.8;
+}
+footer ul {
+    list-style: none;
+}
+footer ul li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    color: #222;
+}
