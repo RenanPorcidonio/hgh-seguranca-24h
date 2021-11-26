@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body {
+    background-color: #eee;
+}
 header {
     background-color: #c4c4c4;
     height: 90px;
@@ -22,32 +25,78 @@ header nav {
     display: flex;
     margin-right: 5vw;
 }
-header nav ul li {
+nav ul li {
     list-style: none;
     float: left;
     padding: 32.5px 15px 30px;
 
 }
-header nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 1.25rem;
     padding: 30px 20px 30px;
 }
-header nav ul li.whatsappBtn {
+nav ul li.whatsappBtn {
     padding: 0px;
     margin: 25px 15px 25px;
 }
-header nav ul li.whatsappBtn button {
+nav ul li.whatsappBtn button {
     padding: 5px 0px 5px;
     border-radius: 24px;
     box-shadow: 2px 2px #222;
 }
-header nav ul li.whatsappBtn .fa-whatsapp {
+nav ul li.whatsappBtn .fa-whatsapp {
     padding-right: 10px;
 }
-
-/* fim do header */
+/* Header end */
+main section.contact {
+    display: flex;
+    margin: 2.5%;
+    height: 500px;
+    border-radius: 16px;
+}
+section.contact div.contactCard {
+    height: 80%;
+    width: 31.5%;
+    margin: auto 1.5%;
+    box-shadow: 3px 3px 5px #777;
+    border: solid 1px #eee;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+/*     justify-content: center; */
+    align-items: center;
+}
+section.contact div.contactCard i {
+    font-size: 100px;
+    margin-top: 10%;
+}
+section.contact div.contactCard h3 {
+    margin-top: 10%;
+    font-size: 32px;
+}
+section.contact div.contactCard span {
+    border-radius: 8px;
+    font-size: 24px;
+    line-height: 1.8;
+    padding: 2.5px 2.5px;
+    margin: 2.5px 2.5px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 1px 2px 5px #777;
+}
+section.contact div.contactCard span i {
+    font-size: 25px;
+    margin-top: 0;
+    padding-right: 10px;
+}
+section.contact div.contactCard a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+/* contact section end */
 
 footer {
     background-color: #c4c4c4;
@@ -73,4 +122,8 @@ footer ul li a {
     text-decoration: none;
     font-size: 1.25rem;
     color: #222;
+}
+footer section.footerBar {
+    text-align: center;
+    padding: 25px;
 }
