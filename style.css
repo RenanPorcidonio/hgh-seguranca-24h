@@ -11,12 +11,11 @@ header {
     background-color: #c4c4c4;
     height: 90px;
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
 }
 header div.logo {
     height: 90px;
-    max-width: 125px;
-    margin-right: auto;
+    max-width: 125px;   
 }
 header div.logo img {
     height: 100%;
@@ -25,11 +24,13 @@ header nav {
     display: flex;
     margin-right: 5vw;
 }
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 nav ul li {
     list-style: none;
-    float: left;
-    padding: 32.5px 15px 30px;
-
 }
 nav ul li a {
     text-decoration: none;
@@ -37,11 +38,13 @@ nav ul li a {
     font-size: 1.25rem;
     padding: 30px 20px 30px;
 }
-nav ul li.whatsappBtn {
+nav ul li.whatsappBtn a{
     padding: 0px;
-    margin: 25px 15px 25px;
+    margin: 0 15px;
 }
 nav ul li.whatsappBtn button {
+    display: flex;
+    justify-content: space-around;
     padding: 5px 0px 5px;
     border-radius: 24px;
     box-shadow: 2px 2px #222;
@@ -50,11 +53,189 @@ nav ul li.whatsappBtn .fa-whatsapp {
     padding-right: 10px;
 }
 /* Header end */
+
+.banner {
+    width: 100vw;
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5%;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #000;
+}
+.banner img{
+    width: 100vw;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    
+    opacity: 0;
+    transition: opacity 1000ms ease;
+}
+span.caption {
+    opacity: 0;
+    position: absolute;
+    bottom: 50px;
+    left: 35vw;
+    right: 35vw;
+    text-align: center;
+    color: #000;
+    text-shadow: 4px 4px 8px #bbb;
+    background-color:rgba(255, 255, 255, 0.212);
+    font-weight: 700;
+    font-size: 30px;
+}
+.prev, .next {
+    background-color: rgba(128, 128, 128, 0.342);
+    color: rgba(255, 255, 255, 0.466);
+    border: 3px solid rgba(255, 255, 255, 0.466);
+    font-size: 25px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    line-height: 3;
+}
+span.prev:hover, span.next:hover {
+    background-color: rgba(34, 34, 34, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.7);
+
+    transition: 200ms ease;
+}
+.next {
+    right: 0;
+}
+.prev {
+    left: 0;
+}
+div.dots {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    left: 43.5vw;
+    right: 43.5vw;
+    display: flex;
+    justify-content: center;
+}
+span.dot {
+    border: 3px solid rgba(255, 255, 255, 0.32);
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    margin: 0 2.5%;
+    cursor: pointer;
+}
+.active, .dot:hover {
+    background-color: rgba(34, 34, 34, 0.7);
+    border: 3px solid rgba(255, 255, 255, 0.79);
+  transition: 200ms ease;
+}
+
+.slider img.selected {
+    opacity: 0.7;
+}
+span.selected {
+    opacity: 1;
+}
+span.selectedDot {
+    background-color: rgba(34, 34, 34, 0.79);
+    border: 3px solid rgba(255, 255, 255, 0.88);
+    transition: 100ms ease;
+}
+
+/* banner section end */
+
+main section.services {
+    margin: 2.5%;
+}
+div.serviceBox {
+    margin: 2.5%;
+    display: flex;
+}
+div.serviceBox img {
+    width: 45%;
+    height: auto;
+    margin: 2.5%;
+}
+div.serviceBox div.serviceInfo {
+    margin: 0 2.5%;
+    text-align: center;
+}
+div.serviceBox div.serviceInfo h3 {
+    font-size: 30px;
+    margin: 5%;
+}
+div.serviceBox div.serviceInfo p {
+    font-size: 20px;
+}
+.blkStripe {
+    background-color: #aaa;
+}
+/* services section end */
+
+main section.about {
+    margin: 2.5%;
+}
+section.about div.aboutInfo {
+    margin: 2.5%;
+    display: flex;
+    font-size: 20px;
+}
+div.aboutInfo div.cardsInfo {
+    margin: 2.5%;
+    text-align: center;
+}
+div.cardsInfo i {
+    font-size: 150px;
+    margin: 5%;
+}
+div.cardsInfo p {
+    margin: 2.5% 20%;
+}
+section.about div.aboutPhilosophy {
+    display: flex;
+    margin: 2.5%;
+}
+div.aboutPhilosophy div.philosophyCards{
+    background-color: #888;
+    margin: 2.5%;
+    padding: 2.5%;
+    text-align: center;
+    box-shadow: 2px 2px 5px #333;
+    font-size: 20px;
+}
+div.philosophyCards h3 {
+    font-size: 30px;
+    margin: 2.5%;
+}
+div.philosophyCards i {
+    font-size: 80px;
+    margin: 2.5%;
+}
+div.philosophyCards p {
+    margin: 2.5%;
+}
+/* about section end */
+
 main section.contact {
     display: flex;
     margin: 2.5%;
     height: 500px;
     border-radius: 16px;
+}
+main h1 {
+    text-align: center;
+    font-size: 36px;
 }
 section.contact div.contactCard {
     height: 80%;
@@ -65,7 +246,6 @@ section.contact div.contactCard {
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-/*     justify-content: center; */
     align-items: center;
 }
 section.contact div.contactCard i {
@@ -73,8 +253,8 @@ section.contact div.contactCard i {
     margin-top: 10%;
 }
 section.contact div.contactCard h3 {
-    margin-top: 10%;
-    font-size: 32px;
+    margin: 5% 0;
+    font-size: 30px;
 }
 section.contact div.contactCard span {
     border-radius: 8px;
@@ -82,9 +262,9 @@ section.contact div.contactCard span {
     line-height: 1.8;
     padding: 2.5px 2.5px;
     margin: 2.5px 2.5px;
-    width: 80%;
+    width: 95%;
     text-align: center;
-    box-shadow: 1px 2px 5px #777;
+    text-shadow: 1px 1px 2px #aaa;
 }
 section.contact div.contactCard span i {
     font-size: 25px;
@@ -96,6 +276,7 @@ section.contact div.contactCard a {
     text-decoration: none;
     color: black;
 }
+
 /* contact section end */
 
 footer {
