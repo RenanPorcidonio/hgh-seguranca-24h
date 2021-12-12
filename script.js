@@ -77,3 +77,20 @@ function start() {
 }
 
 window.addEventListener("load", start)
+
+/* show menu on mmobile device */
+
+const menuBtn = document.querySelector(".menuBtn")
+const closeMenuBtn = document.querySelector(".closeMenuBtn")
+const mmobileNav = document.querySelector(".mobileNav")
+
+menuBtn.addEventListener("click", () => {
+  mmobileNav.style = "display: block;"
+  menuBtn.style = "display: none;"
+  closeMenuBtn.style = "display: inline-block"
+})
+closeMenuBtn.addEventListener("click", () => {
+  mmobileNav.style = "display: none;"
+  closeMenuBtn.style = "display: none;"
+  menuBtn.style = "display: inline-block;"
+})

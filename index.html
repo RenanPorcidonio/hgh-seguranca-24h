@@ -16,13 +16,27 @@
         <nav>
             <ul>
                 <li><a href="">Início</a></li>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
                 <li class="whatsappBtn"><button><a href="https://youtube.com">
                             <i class="fab fa-whatsapp"></i>WhatsApp</a></button></li>
             </ul>
         </nav>
+
+        <span class="menuBtn"><i class="fas fa-bars"></i></span>
+        <span class="closeMenuBtn"><i class="fas fa-times"></i></span>
+
+        <div class="mobileNav">
+            <ul>
+                <li><a href="">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li class="whatsappBtn"><button><a href="https://youtube.com">
+                            <i class="fab fa-whatsapp"></i>WhatsApp</a></button></li>
+            </ul>
+        </div>
     </header>
     <main>
         <section class="banner">
@@ -39,10 +53,10 @@
                     <img class="bannerImg" src="media/cleaner.png" alt="">
                     <span class="caption">Limpeza</span>
                 </div>
-    
+
                 <span class="prev bannerBtn"><i class="fas fa-chevron-left"></i></span>
                 <span class="next bannerBtn"><i class="fas fa-chevron-right"></i></span>
-    
+
                 <div class="dots">
                     <span class="dot selectedDot"></span>
                     <span class="dot"></span>
@@ -50,56 +64,15 @@
                 </div>
             </div>
         </section>
-        <h1>Serviços</h1>
-        <section class="services">
-
-            <div class="serviceBox blkStripe">
-                <div class="serviceInfo">
-                    <h3>Segurança patrimonial</h3>
-                    <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
-                        segurança patrimonial oferecido pela empresa HGH - Portaria 24 horas.</p>
-                </div>
-                <img src="media/security.png" alt="Segurança patrimonial">
-            </div>
-
-            <div class="serviceBox">
-                <div class="serviceInfo">
-                    <h3>Portaria</h3>
-                    <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
-                        portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
-                </div>
-                <img src="https://thumbs.dreamstime.com/z/security-guard-standing-entrance-male-folded-arms-72446310.jpg"
-                    alt="">
-            </div>
-
-            <div class="serviceBox blkStripe">
-                <div class="serviceInfo">
-                    <h3>Jardinagem</h3>
-                    <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
-                        portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
-                </div>
-                <img src="media/gardener.png" alt="jardineiro">
-            </div>
-
-            <div class="serviceBox">
-                <div class="serviceInfo">
-                    <h3>Limpeza</h3>
-                    <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
-                        portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
-                </div>
-                <img src="media/cleaner.png" alt="">
-            </div>
-
-        </section>
         <h1>Sobre</h1>
-        <section class="about">
+        <section id="about" class="about">
             <div class="aboutInfo">
-                <div class="cardsInfo">
+                <div id="whoWeAre" class="cardsInfo">
                     <h2>Quem somos?</h2>
                     <i class="fas fa-id-card"></i>
                     <p>texto exemplo para ocupar o espaço q terá o texto da seção “quem somos”.</p>
                 </div>
-                <div class="cardsInfo">
+                <div id="company" class="cardsInfo">
                     <h2>A empresa</h2>
                     <i class="fas fa-building"></i>
                     <p>texto exemplo para ocupar o espaço q terá o texto da seção “A empresa”.</p>
@@ -126,30 +99,66 @@
             </div>
 
         </section>
+        <h1>Serviços</h1>
+        <section id="services" class="services">
+
+            <div id="security" class="serviceBox blkStripe">
+                <h3>Segurança patrimonial</h3>
+                <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
+                    segurança patrimonial oferecido pela empresa HGH - Portaria 24 horas.</p>
+                <img src="media/security.png" alt="Segurança patrimonial">
+            </div>
+
+            <div id="concierge" class="serviceBox">
+                <h3>Portaria</h3>
+                <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
+                    portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
+                <img src="https://thumbs.dreamstime.com/z/security-guard-standing-entrance-male-folded-arms-72446310.jpg"
+                    alt="">
+            </div>
+
+            <div id="gardening" class="serviceBox blkStripe">
+                <h3>Jardinagem</h3>
+                <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
+                    portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
+                <img src="media/gardener.png" alt="jardineiro">
+            </div>
+
+            <div id="cleaning" class="serviceBox">
+
+                <h3>Limpeza</h3>
+                <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
+                    portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
+                <img src="media/cleaner.png" alt="">
+
+            </div>
+
+        </section>
         <h1>Contato</h1>
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="contactCard">
                 <i class="fas fa-phone-alt"></i>
                 <h3>Telefone</h3>
-                <span><a href="tel:+5515999999999">15 9999-9999</a></span>
-                <span><a href="tel:+5515999999999"></a> 15 9999-9999</span>
+                <a href="tel:+5515991684437">15 99168-4437</a>
+                <a href="tel:+5515981293042">15 98129-3042</a>
+                <a href="tel:+5515998269883">15 99826-9883</a>
             </div>
 
             <div class="contactCard">
                 <i class="fas fa-globe"></i>
                 <h3>Redes Sociais</h3>
-                <span><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-whatsapp"></i>WhatsApp</a></span>
-                <span><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-instagram"></i>Instagram</a></span>
-                <span><a href="http://" target="_blank" rel="noopener noreferrer"><i
-                            class="fab fa-facebook-square"></i>Facebook</a></span>
+                <a href="https://wa.me/5515991356141" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-whatsapp"></i>WhatsApp</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-instagram"></i>Instagram</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><i
+                        class="fab fa-facebook-square"></i>Facebook</a>
             </div>
 
             <div class="contactCard">
                 <i class="fas fa-envelope"></i>
                 <h3>E-Mail</h3>
-                <span><a href="mailto:">email@email.com</a></span>
+                <a href="mailto:hgh.seguranca24h@outlook.com">hgh.seguranca24h@outlook.com</a>
             </div>
 
         </section>
@@ -161,25 +170,25 @@
             <div class="footerCol">
                 <h3>Empresa</h3>
                 <ul>
-                    <li><a href="">Quem somos</a></li>
-                    <li><a href="">A empresa</a></li>
+                    <li><a href="#whoWeAre">Quem somos</a></li>
+                    <li><a href="#company">A empresa</a></li>
                 </ul>
             </div>
             <div class="footerCol">
                 <h3>Navegação</h3>
                 <ul>
-                    <li><a href="">Início</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
             </div>
             <div class="footerCol">
                 <h3>Serviços</h3>
                 <ul>
-                    <li><a href="">Segurança patrimonial</a></li>
-                    <li><a href="">Portaria</a></li>
-                    <li><a href="">Jardinagem</a></li>
-                    <li><a href="">Limpeza</a></li>
+                    <li><a href="#security">Segurança patrimonial</a></li>
+                    <li><a href="#concierge">Portaria</a></li>
+                    <li><a href="#gardening">Jardinagem</a></li>
+                    <li><a href="#cleaning">Limpeza</a></li>
                 </ul>
             </div>
         </div>

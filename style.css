@@ -38,20 +38,49 @@ nav ul li a {
     font-size: 1.25rem;
     padding: 30px 20px 30px;
 }
-nav ul li.whatsappBtn a{
+ul li.whatsappBtn a{
     padding: 0px;
     margin: 0 15px;
 }
-nav ul li.whatsappBtn button {
-    display: flex;
-    justify-content: space-around;
+ul li.whatsappBtn button {
+    font-size: 24px;
     padding: 5px 0px 5px;
     border-radius: 24px;
     box-shadow: 2px 2px #222;
 }
-nav ul li.whatsappBtn .fa-whatsapp {
+ul li.whatsappBtn .fa-whatsapp {
     padding-right: 10px;
 }
+/* nav for mobile devices */
+.menuBtn, .closeMenuBtn {
+    font-size: 52px;
+    align-self: center;
+    margin-right: 5%;
+    cursor: pointer;
+    display: none;
+}
+div.mobileNav {
+    background-color: #777;
+    position: absolute;
+    top: 90px;
+    padding: 20px;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    text-align: center;
+    display: none;
+}
+div.mobileNav ul {
+    list-style: none;
+    line-height: 3.5;
+    font-size: 24px;
+}
+div.mobileNav ul li a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
 /* Header end */
 
 .banner {
@@ -81,12 +110,11 @@ span.caption {
     opacity: 0;
     position: absolute;
     bottom: 50px;
-    left: 35vw;
-    right: 35vw;
+    left: 1vw;
+    right: 1vw;
     text-align: center;
-    color: #000;
-    text-shadow: 4px 4px 8px #bbb;
-    background-color:rgba(255, 255, 255, 0.212);
+    color: #eee;
+    background-color: rgba(0, 0, 0, 0.082);
     font-weight: 700;
     font-size: 30px;
 }
@@ -102,7 +130,9 @@ span.caption {
     position: absolute;
     top: 45%;
     text-align: center;
-    line-height: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 span.prev:hover, span.next:hover {
     background-color: rgba(34, 34, 34, 0.7);
@@ -159,26 +189,37 @@ main section.services {
     margin: 2.5%;
 }
 div.serviceBox {
+    width: 75%;
+    background-color: #dfdfdf;
+    margin: 2.5% auto;
+    text-align: center;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "image"
+    "description";
+}
+div.serviceBox h3 {
+    font-size: 30px;
     margin: 2.5%;
-    display: flex;
+    margin-bottom: 0;
+    grid-area: title;
 }
 div.serviceBox img {
-    width: 45%;
+    width: 50%;
     height: auto;
-    margin: 2.5%;
+    max-height: 400px;
+    margin: 2.5% auto;
+    grid-area: image;
+    object-fit: cover;
 }
-div.serviceBox div.serviceInfo {
-    margin: 0 2.5%;
-    text-align: center;
-}
-div.serviceBox div.serviceInfo h3 {
-    font-size: 30px;
-    margin: 5%;
-}
-div.serviceBox div.serviceInfo p {
+div.serviceBox p {
+    width: 75%;
     font-size: 20px;
+    margin: 0 auto 2.5%;
+    grid-area: description;
 }
-.blkStripe {
+div.blkStripe {
     background-color: #aaa;
 }
 /* services section end */
@@ -207,7 +248,7 @@ section.about div.aboutPhilosophy {
     margin: 2.5%;
 }
 div.aboutPhilosophy div.philosophyCards{
-    background-color: #888;
+    background-color: #ddd;
     margin: 2.5%;
     padding: 2.5%;
     text-align: center;
@@ -230,7 +271,7 @@ div.philosophyCards p {
 main section.contact {
     display: flex;
     margin: 2.5%;
-    height: 500px;
+    align-items: center;
     border-radius: 16px;
 }
 main h1 {
@@ -240,6 +281,7 @@ main h1 {
 section.contact div.contactCard {
     height: 80%;
     width: 31.5%;
+    min-height: 350px;
     margin: auto 1.5%;
     box-shadow: 3px 3px 5px #777;
     border: solid 1px #eee;
@@ -256,17 +298,10 @@ section.contact div.contactCard h3 {
     margin: 5% 0;
     font-size: 30px;
 }
-section.contact div.contactCard span {
-    border-radius: 8px;
-    font-size: 24px;
-    line-height: 1.8;
-    padding: 2.5px 2.5px;
-    margin: 2.5px 2.5px;
-    width: 95%;
-    text-align: center;
-    text-shadow: 1px 1px 2px #aaa;
-}
-section.contact div.contactCard span i {
+/* section.contact div.contactCard  {
+    
+} */
+section.contact div.contactCard a i {
     font-size: 25px;
     margin-top: 0;
     padding-right: 10px;
@@ -275,6 +310,14 @@ section.contact div.contactCard a {
     width: 100%;
     text-decoration: none;
     color: black;
+    font-size: 24px;
+    line-height: 1.8;
+    padding: 2.5px 2.5px;
+    margin: 2.5px 2.5px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #aaa;
+    overflow-wrap: break-word;
+    
 }
 
 /* contact section end */
@@ -307,4 +350,76 @@ footer ul li a {
 footer section.footerBar {
     text-align: center;
     padding: 25px;
+}
+@media(max-width: 767px) { 
+    /* mobile header section */
+    header nav {
+        display: none;
+    }
+    .menuBtn {
+        display: inline-block;
+    }
+    /* mobile banner section */
+    .prev, .next {
+        width: 60px;
+        height: 60px;
+    }
+    div.dots {
+        left: 35vw;
+        right: 35vw;
+    }
+    /* mobile services section */
+    div.serviceBox {
+        display: grid;
+        grid-template-areas: 
+        "title"
+        "image"
+        "description"
+    }
+    div.serviceBox h3 {
+        grid-area: title;
+    }
+    div.serviceBox p {
+        grid-area: description;
+    }
+    div.serviceBox img {
+        width: 75%;
+        grid-area: image;
+    }
+    /* mobile about sectoin */
+    section.about div.aboutInfo {
+        flex-direction: column;
+    }
+    div.cardsInfo p {
+        margin: 2.5% 0;
+    }
+    section.about div.aboutPhilosophy {
+        margin: auto;
+        width: 70%;
+        flex-wrap: wrap;
+        align-content: center;
+        text-align: center;
+        justify-content: center;
+    }
+    /* mobile contact section */
+    section.contact {
+        flex-direction: column;
+        width: 95vw;
+    }
+    section.contact div.contactCard {
+        width: 70%;
+        margin: 0;
+    }
+    /* mobile footer */
+    footer div.footerNav {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    footer div.footerCol {
+        margin-left: 0;
+        margin-bottom: 10%;
+        line-height: 1.8;
+    }
 }
