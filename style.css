@@ -5,20 +5,32 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-color: #eee;
+    /* background-image: url(media/textureBackground.png);
+ */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header {
-    background-color: #c4c4c4;
-    height: 90px;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    transition: 0.4s;
 }
 header div.logo {
-    height: 90px;
+    max-height: 120px;
     max-width: 125px;   
+    transition: 0.6s;
 }
 header div.logo img {
     height: 100%;
+    transition: 0.6s;
 }
 header nav {
     display: flex;
@@ -34,22 +46,44 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
-    color: black;
     font-size: 1.25rem;
     padding: 30px 20px 30px;
+    transition: 0.6s;
+    color: #ddd;
+}
+nav ul li a:hover {
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.048);
+    color: #fff;
 }
 ul li.whatsappBtn a{
     padding: 0px;
     margin: 0 15px;
+    color: #000;
 }
 ul li.whatsappBtn button {
-    font-size: 24px;
-    padding: 5px 0px 5px;
+    font-size: 20px;
+    padding: 2px 0px 2px;
     border-radius: 24px;
     box-shadow: 2px 2px #222;
 }
+ul li.whatsappBtn button:hover, ul li.whatsappBtn a:hover {
+    background: linear-gradient(to right, #25D366, #DCF8C6);
+    color: black;
+}
 ul li.whatsappBtn .fa-whatsapp {
     padding-right: 10px;
+}
+header.sticky {
+    height: 90px;
+    background-color: #ddd;
+}
+header.sticky ul li a {
+    color: #555;
+}
+header.sticky ul li a:hover {
+    color: #000;
+    background-color: #d9d9d9;
 }
 /* nav for mobile devices */
 .menuBtn, .closeMenuBtn {
@@ -58,17 +92,20 @@ ul li.whatsappBtn .fa-whatsapp {
     margin-right: 5%;
     cursor: pointer;
     display: none;
+    transition: 0.6s;
+    color: #fff;
 }
 div.mobileNav {
     background-color: #777;
     position: absolute;
-    top: 90px;
+    top: 120px;
     padding: 20px;
     z-index: 1;
     width: 100%;
     height: 500px;
     text-align: center;
     display: none;
+    transition: 0.6s;
 }
 div.mobileNav ul {
     list-style: none;
@@ -80,15 +117,17 @@ div.mobileNav ul li a {
     color: black;
     width: 100%;
 }
-
+header.sticky .menuBtn, header.sticky .closeMenuBtn {
+    color: #000 ;
+}
+header.sticky .mobileNav {
+    top: 90px;
+}
 /* Header end */
 
 .banner {
     width: 100vw;
     display: flex;
-    flex-direction: center;
-    align-items: center;
-    justify-content: center;
     margin-bottom: 2.5%;
 }
 .slider {
@@ -123,8 +162,8 @@ span.caption {
     color: rgba(255, 255, 255, 0.466);
     border: 3px solid rgba(255, 255, 255, 0.466);
     font-size: 25px;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
@@ -150,10 +189,9 @@ span.prev:hover, span.next:hover {
 div.dots {
     position: absolute;
     bottom: 10px;
-    text-align: center;
-    left: 43.5vw;
-    right: 43.5vw;
+    width: 100%;
     display: flex;
+    justify-self: flex-start;
     justify-content: center;
 }
 span.dot {
@@ -162,7 +200,7 @@ span.dot {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    margin: 0 2.5%;
+    margin: 0 1%;
     cursor: pointer;
 }
 .active, .dot:hover {
@@ -189,8 +227,7 @@ main section.services {
     margin: 2.5%;
 }
 div.serviceBox {
-    width: 75%;
-    background-color: #dfdfdf;
+    width: 100%;
     margin: 2.5% auto;
     text-align: center;
     display: grid;
@@ -206,7 +243,7 @@ div.serviceBox h3 {
     grid-area: title;
 }
 div.serviceBox img {
-    width: 50%;
+    width: 75%;
     height: auto;
     max-height: 400px;
     margin: 2.5% auto;
@@ -214,46 +251,50 @@ div.serviceBox img {
     object-fit: cover;
 }
 div.serviceBox p {
-    width: 75%;
+    width: 100%;
     font-size: 20px;
     margin: 0 auto 2.5%;
     grid-area: description;
+    text-align: justify;
 }
-div.blkStripe {
+/* div.blkStripe {
     background-color: #aaa;
-}
+} */
 /* services section end */
 
 main section.about {
     margin: 2.5%;
 }
 section.about div.aboutInfo {
-    margin: 2.5%;
     display: flex;
     font-size: 20px;
+    margin-bottom: 7.5%;
 }
 div.aboutInfo div.cardsInfo {
-    margin: 2.5%;
+    margin: 2.5% auto;
     text-align: center;
+    max-width: 50%;
+    font-size: 1.25rem;
 }
 div.cardsInfo i {
     font-size: 150px;
     margin: 5%;
 }
 div.cardsInfo p {
-    margin: 2.5% 20%;
+    margin: 2.5%;
+    text-align: justify;
 }
 section.about div.aboutPhilosophy {
     display: flex;
-    margin: 2.5%;
+    justify-content: space-between;
+    margin-bottom: 5%;
 }
 div.aboutPhilosophy div.philosophyCards{
-    background-color: #ddd;
-    margin: 2.5%;
-    padding: 2.5%;
     text-align: center;
-    box-shadow: 2px 2px 5px #333;
-    font-size: 20px;
+    /* box-shadow: 1px 1px 2.5px #333; */
+    font-size: 18px;
+    max-width: 33%;
+    
 }
 div.philosophyCards h3 {
     font-size: 30px;
@@ -265,6 +306,8 @@ div.philosophyCards i {
 }
 div.philosophyCards p {
     margin: 2.5%;
+    width: 100%;
+    text-align: center;
 }
 /* about section end */
 
@@ -279,9 +322,8 @@ main h1 {
     font-size: 36px;
 }
 section.contact div.contactCard {
-    height: 80%;
     width: 31.5%;
-    min-height: 350px;
+    min-height: 385px;
     margin: auto 1.5%;
     box-shadow: 3px 3px 5px #777;
     border: solid 1px #eee;
@@ -361,12 +403,8 @@ footer section.footerBar {
     }
     /* mobile banner section */
     .prev, .next {
-        width: 60px;
-        height: 60px;
-    }
-    div.dots {
-        left: 35vw;
-        right: 35vw;
+        width: 50px;
+        height: 50px;
     }
     /* mobile services section */
     div.serviceBox {
@@ -383,23 +421,39 @@ footer section.footerBar {
         grid-area: description;
     }
     div.serviceBox img {
-        width: 75%;
+        width: 100%;
         grid-area: image;
     }
-    /* mobile about sectoin */
+    /* mobile about section */
     section.about div.aboutInfo {
         flex-direction: column;
+        max-width: 100%;
+        text-align: center;
+    }
+    div.cardsInfo {
+        width: 100%;
+        min-width: 100%;
+        margin: 0;
     }
     div.cardsInfo p {
         margin: 2.5% 0;
+        width: 100%;
+        font-size: 1.15rem;
     }
     section.about div.aboutPhilosophy {
         margin: auto;
-        width: 70%;
-        flex-wrap: wrap;
+        width: 100%;
+        flex-direction: column;
         align-content: center;
         text-align: center;
         justify-content: center;
+    }
+    div.aboutPhilosophy div.philosophyCards {
+        min-width: 100%;
+        margin: 0;
+    }
+    div.aboutPhilosophy div.philosophyCards p {
+        width: 100%;
     }
     /* mobile contact section */
     section.contact {

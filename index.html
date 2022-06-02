@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Renan Porcidonio">
     <script src="https://kit.fontawesome.com/b77483d826.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./media/hgh_logo.png">
     <title>HGH-Portaria 24h</title>
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="media/hgh_logo.png" alt="HGH-Portaria logo"></div>
+        <div id="home" class="logo"><img src="media/hgh_logo.png" alt="HGH-Portaria logo"></div>
         <nav>
             <ul>
-                <li><a href="">Início</a></li>
+                <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li class="whatsappBtn"><button><a href="https://youtube.com">
+                <li class="whatsappBtn"><button><a href="https://wa.me/5515991356141" target="_blank">
                             <i class="fab fa-whatsapp"></i>WhatsApp</a></button></li>
             </ul>
         </nav>
@@ -27,13 +29,14 @@
         <span class="menuBtn"><i class="fas fa-bars"></i></span>
         <span class="closeMenuBtn"><i class="fas fa-times"></i></span>
 
+        <!-- mobileNav -->
         <div class="mobileNav">
             <ul>
                 <li><a href="">Início</a></li>
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
-                <li class="whatsappBtn"><button><a href="https://youtube.com">
+                <li class="whatsappBtn"><button><a href="https://wa.me/5515991356141" target="_blank">
                             <i class="fab fa-whatsapp"></i>WhatsApp</a></button></li>
             </ul>
         </div>
@@ -53,6 +56,10 @@
                     <img class="bannerImg" src="media/cleaner.png" alt="">
                     <span class="caption">Limpeza</span>
                 </div>
+                <!-- <div>
+                    <img class="bannerImg" src="media/patrol.png" alt="">
+                    <span class="caption">Ronda</span>
+                </div> -->
 
                 <span class="prev bannerBtn"><i class="fas fa-chevron-left"></i></span>
                 <span class="next bannerBtn"><i class="fas fa-chevron-right"></i></span>
@@ -70,12 +77,18 @@
                 <div id="whoWeAre" class="cardsInfo">
                     <h2>Quem somos?</h2>
                     <i class="fas fa-id-card"></i>
-                    <p>texto exemplo para ocupar o espaço q terá o texto da seção “quem somos”.</p>
+                    <p>Com a pandemia, o corte de gastos e a escolha por serviços mais pontuais tem sido procurado por diversos setores da sociedade, inclusive pelos condomínios.
+                    </p>
+                    <p>
+                    Se tratando de eficiência, a <strong>HGH Segurança Patrimonial</strong>, beneficia o condomínio e o síndico em todos os sentidos, pois ao delegar a demanda para nossa empresa, vai poder direcionar seus esforços e gastos a outras áreas e assuntos de grande relevância ao condomínio.</p>
                 </div>
                 <div id="company" class="cardsInfo">
                     <h2>A empresa</h2>
                     <i class="fas fa-building"></i>
-                    <p>texto exemplo para ocupar o espaço q terá o texto da seção “A empresa”.</p>
+                    <p>Com a pandemia, o corte de gastos e a escolha por serviços mais pontuais tem sido procurado por diversos setores da sociedade, inclusive pelos condomínios.
+                    </p>
+                    <p>
+                    Se tratando de eficiência, a <strong>HGH Segurança Patrimonial</strong>, beneficia o condomínio e o síndico em todos os sentidos, pois ao delegar a demanda para nossa empresa, vai poder direcionar seus esforços e gastos a outras áreas e assuntos de grande relevância ao condomínio.</p>
                 </div>
             </div>
 
@@ -84,17 +97,23 @@
                 <div class="philosophyCards">
                     <h3>Missão</h3>
                     <i class="fas fa-briefcase"></i>
-                    <p>Texto exemplo para ocupar o espaço que terá o texto da seção “missão”</p>
+                    <p>Fazer nosso trabalho com grande excelência
+                        sempre seguindo os nossos valores
+                        para proporcionar melhores experiências para nossos clientes</p>
                 </div>
                 <div class="philosophyCards">
                     <h3>Valores</h3>
                     <i class="fas fa-book"></i>
-                    <p>Texto exemplo para ocupar o espaço que terá o texto da seção “valores”</p>
+                    <p>Ética, transparência, respeito, responsabilidade,
+                        comprometimento</p>
                 </div>
                 <div class="philosophyCards">
                     <h3>visão</h3>
                     <i class="fas fa-eye"></i>
-                    <p>Texto exemplo para ocupar o espaço que terá o texto da seção “visão”</p>
+                    <p>Melhorar cada vez mais nossos serviços,
+                        qualiificar ainda mais nossos profissonais
+                        para proporcionar serviços de formas ainda mais excelentes e inovadoras
+                        e para que sejamos a melhor empresa da região</p>
                 </div>
             </div>
 
@@ -104,8 +123,7 @@
 
             <div id="security" class="serviceBox blkStripe">
                 <h3>Segurança patrimonial</h3>
-                <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
-                    segurança patrimonial oferecido pela empresa HGH - Portaria 24 horas.</p>
+                <p>A <strong>vigilância patrimonial</strong> tem como objetivo principal a prevenção e proteção de instalações, patrimônio e colaboradores do local, sejam eles privados ou públicos, residenciais ou comerciais, rurais ou urbanos, minimizando ao máximo eventuais perdas ou prejuízos.</p>
                 <img src="media/security.png" alt="Segurança patrimonial">
             </div>
 
@@ -122,6 +140,11 @@
                 <p>texto de exemplo parar ocupar o espaço reservado para a seção em que explica o serviço de
                     portaria oferecido pela empresa HGH - Portaria 24 horas.</p>
                 <img src="media/gardener.png" alt="jardineiro">
+            </div>
+            <div id="patrol" class="serviceBox blkStripe">
+                <h3>ronda Móvel</h3>
+                <p>Para garantir a maior segurança da sua residência, condomínio ou comércio o serviço de <strong>ronda móvel</strong> monitorado 24H é uma excelente opção. Mesmo que o local já conte com outras opções de segurança, a ronda traz uma maior tranquilidade e proteção. A <strong>HGH SEGURANÇA PATRIMONIAL</strong> te oferece esse serviço.</p>
+                <img src="media/patrol.png" alt="Ronda">
             </div>
 
             <div id="cleaning" class="serviceBox">
@@ -149,9 +172,9 @@
                 <h3>Redes Sociais</h3>
                 <a href="https://wa.me/5515991356141" target="_blank" rel="noopener noreferrer"><i
                         class="fab fa-whatsapp"></i>WhatsApp</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><i
+                <a href="https://www.instagram.com/hghsegurancapatrimonial/" target="_blank" rel="noopener noreferrer"><i
                         class="fab fa-instagram"></i>Instagram</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><i
+                <a href="https://www.facebook.com/profile.php?id=100071052317277" target="_blank" rel="noopener noreferrer"><i
                         class="fab fa-facebook-square"></i>Facebook</a>
             </div>
 
@@ -165,7 +188,7 @@
     </main>
     <footer>
         <div class="footerNav">
-            <div class="logo"><img src="/media/hgh_logo.png" alt="HGH-Portaria logo"></div>
+            <div class="logo"><img src="media/hgh_logo.png" alt="HGH-Portaria logo"></div>
 
             <div class="footerCol">
                 <h3>Empresa</h3>
@@ -193,7 +216,7 @@
             </div>
         </div>
         <section class="footerBar">
-            <span>HGH - Portaria 24 Horas</span>
+            <span>© HGH - Segurança Patrimonial</span>
         </section>
     </footer>
     <script src="script.js"></script>

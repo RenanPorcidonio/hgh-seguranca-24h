@@ -1,3 +1,8 @@
+const header = document.querySelector("header")
+window.addEventListener("scroll", () => {
+  header.classList.toggle("sticky", window.scrollY > 0)
+})
+/* header configurantion end*/
 let time = 5000
 let currentImageIndex = 0
 let images = document.querySelectorAll(".slider img")
@@ -5,7 +10,6 @@ const caption = document.querySelectorAll(".caption")
 const nextBtn = document.querySelector(".next")
 const prevBtn = document.querySelector(".prev")
 const dots = document.querySelectorAll(".dot")
-
 let max = images.length
 
 /* automatic slide */
@@ -83,6 +87,7 @@ window.addEventListener("load", start)
 const menuBtn = document.querySelector(".menuBtn")
 const closeMenuBtn = document.querySelector(".closeMenuBtn")
 const mmobileNav = document.querySelector(".mobileNav")
+const mobileNavBtns = document.querySelector(".mobileNav ul")
 
 menuBtn.addEventListener("click", () => {
   mmobileNav.style = "display: block;"
@@ -90,6 +95,12 @@ menuBtn.addEventListener("click", () => {
   closeMenuBtn.style = "display: inline-block"
 })
 closeMenuBtn.addEventListener("click", () => {
+  mmobileNav.style = "display: none;"
+  closeMenuBtn.style = "display: none;"
+  menuBtn.style = "display: inline-block;"
+})
+
+mobileNavBtns.addEventListener("click", () => {
   mmobileNav.style = "display: none;"
   closeMenuBtn.style = "display: none;"
   menuBtn.style = "display: inline-block;"
